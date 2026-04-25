@@ -1,17 +1,24 @@
+use std::fmt::format;
+
 fn trim_me(input: &str) -> &str {
     // TODO: Remove whitespace from both ends of a string.
+    input.trim_ascii()
 }
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There are multiple ways to do this.
+    let s=format!("{}{}",input," world!");
+    s
 }
 
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons".
+    input.replace("cars","balloons")
 }
 
 fn main() {
     // You can optionally experiment here.
+    println!("trim:{}",trim_me("input"));
 }
 
 #[cfg(test)]
